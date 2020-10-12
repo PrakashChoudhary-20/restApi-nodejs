@@ -6,6 +6,6 @@ module.exports.addFoodItem = async (item) => {
     try {
         return await repository.save()
     } catch(err) {
-        console.log(err)
+        throw err
     }
 }
