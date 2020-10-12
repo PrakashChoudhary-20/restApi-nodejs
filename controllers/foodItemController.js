@@ -1,12 +1,8 @@
 const service = require('../services/foodService')
+let defaultResponse = require('../response/')
 
 module.exports.addFoodItem = async (req, res) => {
-    let response = {
-        status: '',
-        message: '',
-        body: ''
-    }
-
+    let response = {...defaultResponse}
     try {
         let result = await service.addFoodItem(req.body)
         response.status = 201,
@@ -15,8 +11,6 @@ module.exports.addFoodItem = async (req, res) => {
     }
     catch(err) {
         console.log(err)
-        response.status = 500,
-        response.message = "Something went wrong",
         response.body = {}
     }
     res.status(response.status).send(response);
