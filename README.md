@@ -20,6 +20,6 @@ Basic CRUD operations implementation using ExpressJS and Mongoose.
 - region (String)
 
 # API Routes
-- /api/v1/dishes**/**
-- /api/v1/dishes**/get_all_dishes**
-- /api/v1/dishes**/get_dish/:id**
+- /api/v1/dishes/
+- /api/v1/dishes/get_all_dishes
+- /api/v1/dishes/get_dish/:id
